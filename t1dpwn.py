@@ -101,7 +101,7 @@ def tpatchelf(*args):
     if stderr:
         log.error(f"patchelf libc.so.6文件失败！")
         return
-    if t_arch == "amd64":
+    if "amd64" in t_patch:
         command = f"patchelf --set-interpreter {t_path}/glibc-all-in-one/libs/{t_patch}/ld-linux-x86-64.so.2 {t_file}"
         stdout, stderr = execute_command(command)
     else:
@@ -117,4 +117,4 @@ def tpatchelf(*args):
             if stderr:
                 log.error(f"patchelf libc.so.6文件失败！")
                 return
-    log.success(f"patchelf成功！")
+    log.success(f"patchelf成功!")
