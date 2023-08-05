@@ -1,12 +1,45 @@
 # t1dpwn
-T1d给自己偷懒用的python库
 
-事先声明，只是T1d师傅自己懒，所以按照自己的个人需求做了一个依托pwntools工具实现的一些小方法来给自己提供便利，至于更新那肯定是随缘，不过要是有问题师傅指出来我一点虚心解决改正，当然师傅们要是有其他好的想法或者优化代码的思路我也非常欢迎和感谢。期待和各位师傅们交流！
+![GitHub](https://img.shields.io/github/license/yourusername/t1dpwn)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/yourusername/t1dpwn)
+![GitHub issues](https://img.shields.io/github/issues/yourusername/t1dpwn)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/t1dpwn)
 
-小目标：
+T1d的Python库，旨在为pwntools工具提供个人方便。
 
-根据题目给的libc自动patchelf
+请注意，这个库主要是为T1d个人使用和方便而创建的。它包含一些基于pwntools的小方法，以满足个人需求。更新将基于T1d的可用性和兴趣进行。但是，如果有任何问题，T1d乐于接受来自其他开发者的反馈、建议和修正。欢迎和感谢各位开发者的想法和代码优化。期待与各位开发者的交流！
 
-简化pwntools指令
+## 待办事项列表
 
-封装ropper实现直接检索gadget
+- [ ] 根据题目提供的libc自动进行patchelf
+- [ ] 简化pwntools指令
+- [ ] 封装ropper以直接检索gadget
+
+欢迎根据以上任务做出贡献。欢迎提交拉取请求！
+
+## 安装
+
+您可以使用pip安装t1dpwn：
+
+```
+pip install t1dpwn
+```
+
+## 使用方法
+
+```python
+import t1dpwn
+
+# 示例用法
+t1dpwn.方法名()
+```
+
+请参阅文档或源代码，了解可用方法及其使用方法的详细信息。
+
+## 贡献
+
+欢迎贡献代码、报告错误和提出功能请求！请随时提交问题或拉取请求，为该项目做出贡献。
+
+## 许可证
+
+本项目基于[MIT许可证](LICENSE)。
