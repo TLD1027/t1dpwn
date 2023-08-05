@@ -1,9 +1,9 @@
 # t1dpwn
 
-![GitHub](https://img.shields.io/github/license/yourusername/t1dpwn)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/yourusername/t1dpwn)
-![GitHub issues](https://img.shields.io/github/issues/yourusername/t1dpwn)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/yourusername/t1dpwn)
+![GitHub](https://img.shields.io/github/license/TLD1027/t1dpwn)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/TLD1027/t1dpwn)
+![GitHub issues](https://img.shields.io/github/issues/TLD1027/t1dpwn)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/TLD1027/t1dpwn)
 
 T1d的Python库，旨在为pwntools工具提供个人方便。
 
