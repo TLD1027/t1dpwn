@@ -9,7 +9,8 @@ t_arch = null
 t_patch = null
 t_path = "/home/t1d/tools"
 t_pwnlib = null
-t_pwnfile = null
+t_elf = null
+t_libc_base = 0
 
 def tset(my_file):
     global t_file, tlib, tarch, t_patch
@@ -20,13 +21,9 @@ def tset(my_file):
         t_patch = f"{t_lib}_{t_arch}"
         
 def tbegin():
-    global t_pwnfile, t_pwnlib
-    t_pwnfile = ELF(f"{t_file}")
-    t_pwnlib = t_pwnfile.libc
-        
-def search_folder(root_folder, target_folder):
-    target_path = os.path.join(root_folder, target_folder)
-    return os.path.exists(target_path)
+    global t_elf, t_pwnlib
+    t_elf = ELF(t_file)
+    t_pwnlib = t_elf.libc
             
 def find_so_files(directory):
     so_files = []
@@ -122,3 +119,29 @@ def tpatchelf(*args):
                 log.error(f"patchelf failed for {arg} file!")
                 return
     log.success(f"Patchelf successfully!")
+ 
+class Telf:
+    def sym(symbol_name):
+        addr = t_elf.sym[symbol_name]
+        log.success(f"{symbol_name}_addr: {hex(addr)}")
+        return addr
+
+    def got(symbol_name):
+        addr = t_elf.got[symbol_name]
+        log.success(f"{symbol_name}_got: {hex(addr)}")
+        return addr
+
+    def plt(symbol_name):
+        addr = t_elf.plt[symbol_name]
+        log.success(f"{symbol_name}_plt: {hex(addr)}")
+        return addr
+    
+def tsetlib(addr):
+    global t_libc_base
+    t_libc_base = addr
+    log.success(f"base_addr: {hex(t_libc_base)}")
+    
+def tlib(symbol_name):
+    addr = t_libc_base + t_pwnlib.sym[symbol_name]
+    log.success(f"{symbol_name}_addr: {hex(addr)}")
+
