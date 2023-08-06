@@ -19,18 +19,15 @@ T1d的Python库，旨在为pwntools工具提供个人方便。
 
 ## 安装
 
-
+下载t1dpwn.py放在自己的python包管理器中即可。
 
 ## 使用方法
 
 ```python
 from t1dpwn import *
-
-# 示例用法
-方法名()
 ```
 
-请参阅文档或源代码，了解可用方法及其使用方法的详细信息。
+1. 设置elf文件和libc文件
 
 ## 贡献
 
