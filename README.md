@@ -11,7 +11,7 @@ T1d的Python库，旨在为pwntools工具提供个人方便。
 
 ## 待办事项列表
 
-- [ ] 根据题目提供的libc自动进行patchelf
+- [1] 根据题目提供的libc自动进行patchelf
 - [ ] 简化pwntools指令
 - [ ] 封装ropper以直接检索gadget
 
